@@ -5,6 +5,10 @@ product                        /product    ext4    ro                           
 /dev/block/by-name/md_udc      /metadata   ext4    noatime,nosuid,nodev,discard                                                                                   check,wait,formattable,first_stage_mount
 /dev/block/by-name/userdata    /data       f2fs    noatime,nosuid,nodev,discard,noflush_merge,fsync_mode=nobarrier,reserve_root=134217,resgid=1065,inlinecrypt    wait,check,formattable,quota,reservedsize=128m,latemount,resize,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption,fsverity
 /dev/block/by-name/misc        /misc       emmc    defaults                                                                                                       defaults
+# /preload       ext4      /dev/block/platform/bootdevice/by-name/hidden        flags=display=preload
+# /keydata       ext4      /dev/block/platform/bootdevice/by-name/keydata       flags=display=keydata
+# /keyrefuge     f2fs      /dev/block/platform/bootdevice/by-name/keyrefuge     flags=display=keyrefuge
+
 
 /system_image  emmc  /dev/block/mapper/system  flags=backup=0;flashimg=1;display="System Image"
 /vendor_image  emmc  /dev/block/mapper/vendor  flags=backup=0;flashimg=1;display="Vendor Image"
