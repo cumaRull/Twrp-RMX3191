@@ -9,6 +9,10 @@ product                        /product    ext4    ro                           
 # /keydata       ext4      /dev/block/platform/bootdevice/by-name/keydata       flags=display=keydata
 # /keyrefuge     f2fs      /dev/block/platform/bootdevice/by-name/keyrefuge     flags=display=keyrefuge
 
+# /preload       ext4      /dev/block/platform/bootdevice/by-name/hidden        flags=display=preload
+# /keydata       ext4      /dev/block/platform/bootdevice/by-name/keydata       flags=display=keydata
+# /keyrefuge     f2fs      /dev/block/platform/bootdevice/by-name/keyrefuge     flags=display=keyrefuge
+
 
 /system_image  emmc  /dev/block/mapper/system  flags=backup=0;flashimg=1;display="System Image"
 /vendor_image  emmc  /dev/block/mapper/vendor  flags=backup=0;flashimg=1;display="Vendor Image"
