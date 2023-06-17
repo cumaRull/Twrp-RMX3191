@@ -151,3 +151,9 @@ TW_INCLUDE_REPACKTOOLS := true
 # Debug
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+
+# R11.1 Settings
+	export FOX_VERSION="R11"
+	export FOX_BUILD_TYPE="Stable"
+	export OF_MAINTAINER="ismasrull"
