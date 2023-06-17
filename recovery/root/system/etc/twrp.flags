@@ -14,11 +14,6 @@
 /expdb           emmc      /dev/block/by-name/expdb
 /seccfg          emmc      /dev/block/by-name/seccfg
 
-# /preload       ext4      /dev/block/platform/bootdevice/by-name/hidden        flags=display=preload
-# /keydata       ext4      /dev/block/platform/bootdevice/by-name/keydata       flags=display=keydata
-# /keyrefuge     f2fs      /dev/block/platform/bootdevice/by-name/keyrefuge     flags=display=keyrefuge
-
-
 # IMEI and modem related
 # below four partitions are ext4, but we are using only for backup so emmc
 /protect_f       emmc      /dev/block/by-name/protect1    flags=backup
