@@ -35,8 +35,7 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-	export TW_DEFAULT_LANGUAGE="en"
-	export LC_ALL="C"
+	
 	export ALLOW_MISSING_DEPENDENCIES=true
 
 	
@@ -44,11 +43,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export TARGET_DEVICE_ALT="RMX3191,rmx3191"
 
 	
-	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
-	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
-	#export OF_NO_MIUI_PATCH_WARNING=1
 	
-
 	# R11.1 Settings
 	export FOX_VERSION="R11"
 	export FOX_BUILD_TYPE="Stable"
@@ -56,13 +51,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	
 
 	# OTA
-	export OF_KEEP_DM_VERITY=1
-	export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
-	export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
-	export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
-        export OF_AB_DEVICE=0
-        export OF_TWRP_COMPATIBILITY_MODE=1
-	
 	
 
 	# let's see what are our build VARs
