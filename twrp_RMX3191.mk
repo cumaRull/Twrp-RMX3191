@@ -31,12 +31,18 @@ PRODUCT_MANUFACTURER := realme
 
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
+PRODUCT_SHIPPING_API_LEVEL := 31
 # fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock
+    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.0-impl-mock.recovery \
+    fastbootd
 
-# Bypass anti-rollback ROMs protection
-# Set build date to Jan 1 2009 00:00:00
+# HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.date.utc=1230768000
+    ro.vendor.build.security_patch=2099-12-31 \
+    ro.bootimage.build.date.utc=0 \
+    ro.build.date.utc=0
+
+
+
