@@ -17,7 +17,7 @@
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
@@ -28,7 +28,6 @@ PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX3191
 PRODUCT_MANUFACTURER := realme
 
-PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
